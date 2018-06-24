@@ -62,7 +62,7 @@ var person2 = new Person('BMM', 24)
 缺点：i 全局作用域中定义的函数只能被某个对象调用（person1、person2）  
 &emsp;&emsp;&emsp;ii 若对象需要定义很多方法，就没封装性可言了
 
-### 3. 原型模式
+## 3. 原型模式
 
 ```js
 function Person() {}

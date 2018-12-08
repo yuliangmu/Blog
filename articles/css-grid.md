@@ -1,6 +1,3 @@
-<!-- github 支持 `-空格[空格]` 表示待办事项，`-空格[x]` 表示已完成，但是 markdown 原生不支持-->
-<!-- https://my.oschina.net/antsky/blog/1475173  https://www.jianshu.com/p/baa5aaab4018 锚点参考 -->
-
 # Grid 布局
 
 [CSS Grid Layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) is the most powerful layout system available in CSS. It is a 2-dimensional system, meaning it can handle both columns and rows, unlike [flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) which is largely a 1-dimensional system.

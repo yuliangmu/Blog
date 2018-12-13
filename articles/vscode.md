@@ -1,6 +1,6 @@
 # vscode 配置
 
-```json
+```js
 {
   // 编辑器
   "editor.formatOnPaste": true,

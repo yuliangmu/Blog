@@ -15,7 +15,6 @@
   "editor.tabSize": 2,
   "editor.wordWrap": "on",
   "files.autoSave": "onFocusChange",
-  "http.systemProxy": "on",
 
   // 插件：prettier
   "prettier.eslintIntegration": true,

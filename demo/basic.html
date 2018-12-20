@@ -4,12 +4,20 @@
     <meta charset="UTF-8" />
     <title></title>
     <script src="../assets/lib/vue@2.5.21.js"></script>
+    <style>
+      .red {
+        color: red;
+      }
+      .big {
+        font-size: 2em;
+      }
+    </style>
   </head>
   <body>
     <div id="app">
       <ul>
         <todo-item
-          style="background: red; margin-bottom: 10px;"
+          :class="classObj"
           v-for="(item, index) in todos"
           :todo="item"
           :href="item.href"
@@ -32,6 +40,10 @@
     const vm = new Vue({
       el: '#app',
       data: {
+        classObj: {
+          red: true,
+          big: true
+        },
         todos: [
           { id: 0, text: 'eat' },
           { id: 1, text: 'sleep' },

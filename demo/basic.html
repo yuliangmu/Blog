@@ -4,81 +4,18 @@
     <meta charset="UTF-8" />
     <title></title>
     <script src="../assets/lib/vue@2.5.21.js"></script>
-    <style>
-      .red {
-        color: red;
-      }
-      .big {
-        font-size: 2em;
-      }
-    </style>
   </head>
   <body>
     <div id="app">
-      <ul>
-        <todo-item
-          :class="classObj"
-          v-for="(item, index) in todos"
-          :todo="item"
-          :href="item.href"
-          :key="item.id"
-          @click.native="removeItem(index)"
-        ></todo-item>
-      </ul>
-      <p>{{ msg }}</p>
-      <p>{{ reverseMsg }}</p>
-      <p>{{ reverseMsgFn() }}</p>
-      <p>{{ now }}</p>
-      <p>{{ nowFn() }}</p>
+      <button @keyup.f1="alert('hi')">{{ msg }}</button>
     </div>
   </body>
   <script>
-    Vue.component('todo-item', {
-      props: ['todo'],
-      template: `<li>{{ todo.text }}</li>`
-    })
+    Vue.config.keyCodes.f1 = 112
     const vm = new Vue({
       el: '#app',
       data: {
-        classObj: {
-          red: true,
-          big: true
-        },
-        todos: [
-          { id: 0, text: 'eat' },
-          { id: 1, text: 'sleep' },
-          { id: 2, text: 'play' },
-          { id: 3, text: 'hit' },
-          { id: 4, text: 'pull' }
-        ],
-        msg: 'you are my joy.'
-      },
-      computed: {
-        reverseMsg: function() {
-          console.log('computed')
-          return this.msg
-            .split('')
-            .reverse()
-            .join('')
-        },
-        now: function() {
-          return Date.now()
-        }
-      },
-      methods: {
-        removeItem: function(index) {
-          this.todos.splice(index, 1)
-        },
-        reverseMsgFn: function() {
-          console.log('fn')
-          return this.msg
-            .split('')
-            .reverse()
-            .join('')
-        },
-        nowFn: function() {
-          return Date.now()
-        }
+        msg: 'aaa'
       }
     })
   </script>

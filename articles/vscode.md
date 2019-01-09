@@ -1,4 +1,6 @@
-# vscode 配置
+# vscode 编辑器
+
+## 工作区设置
 
 ```js
 {
@@ -25,3 +27,9 @@
   "vetur.format.defaultFormatter.js": "vscode-typescript"
 }
 ```
+
+## 常用快捷键
+
+- [ ] `Home、End` 键快速跳转到行首行尾 (PC + Mac) :+1:
+
+- [ ] `Ctrl + ↑/↓` 滚动页面 (PC + Mac) :+1:

@@ -1,4 +1,4 @@
-## Chrome
+# Chrome
 
 浏览器切换标签页
 
@@ -6,16 +6,20 @@
 
 - [ ] 2. `Ctrl + PageUp`/`Ctrl + PageDown`（Code 也支持哦！！！）
 
-- [ ] 3. `Ctrl + 数字`
+- [ ] 3. `Ctrl + 数字` (9 表示最后一个标签页)
 
 ## 控制台
 
+看一下这个系列介绍：[Medium](https://medium.com/@tomsu)
+
 1. `Command + Shift + P` 打开命令行，操作可多了
 
-- 输入 layout 这个超好用，以前自己一直很困惑的控制台显示问题。。。yeah，元素，css,盒子显示问题
+- 输入 layout 改变控制台展示，超棒！
 
-[Medium](https://medium.com/@tomsu)
+## 插件
 
-第 19 条超实用 Quickly switch panel layout
+**Google Translate**
 
-Medium 超棒啊，我要丢掉其它的，拥入你的怀抱，谁叫你是 M 开头，且 Logo 用的是 M 呀~
+设置：设置快捷键 `Alt + T`(PC + Mac)，插件勾选 "Don't display icon or pop-up"
+
+使用：选中需要翻译的单词，按 `Alt + T` 弹出翻译（体验最好）

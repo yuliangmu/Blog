@@ -1,0 +1,4 @@
+⌘ => Command
+⌃ => Control
+⌥ => Option
+⇧ => Shift

@@ -1,6 +1,14 @@
 # CSS 最佳实践
 
-## 盒模型
+兼容：IE9↑
+
+## 目录
+
+- [使用 IE 盒模型](#使用-ie-盒模型)
+- [清除浮动](#清除浮动)
+- [属性书写顺序](#属性书写顺序)
+
+## 使用 IE 盒模型
 
 > [CSS-TRICKS](https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/)
 
@@ -15,7 +23,7 @@ html {
 }
 ```
 
-## 清楚浮动
+## 清除浮动
 
 > [StackOverflow](https://stackoverflow.com/questions/211383/what-methods-of-clearfix-can-i-use/1633170#1633170)
 
@@ -27,7 +35,7 @@ html {
 }
 ```
 
-附：如果不考虑兼容性，使用 `flex` 和 `grid` 更好
+附：如果不考虑 IE [兼容性](https://caniuse.com/#search=flexbox)，可以愉快地使用 `flex` 和 `grid`
 
 ## 属性书写顺序
 
@@ -70,4 +78,12 @@ html {
 
 CSS3 属性顺序注意: [CSS-TRICKS](https://css-tricks.com/ordering-css3-properties/)
 
-## 参考
+## 伪元素选择器
+
+伪元素选择器使用**两个冒号**
+
+```css
+selector::pseudo-element {
+  property: value;
+}
+```

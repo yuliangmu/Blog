@@ -37,10 +37,24 @@ export default {
   ...
   destroyed() {},
   // 6. 非响应式的属性（不依赖响应系统的实例属性）
-  methods: {}
+  methods: {},
+  // 7. 渲染 (组件输出的声明式描述)
+  template: ``
 ```
 
 完整顺序请参考本条目链接
+
+### [事件名](https://cn.vuejs.org/v2/guide/components-custom-events.html#%E4%BA%8B%E4%BB%B6%E5%90%8D)
+
+使用 kebab-case 的事件名，平时都是用的小驼峰，注意改正
+
+```html
+<my-component v-on:my-event="doSomething"></my-component>
+```
+
+```js
+this.$emit('myEvent')
+```
 
 ### [元素特性的顺序](https://cn.vuejs.org/v2/style-guide/#%E7%BB%84%E4%BB%B6-%E5%AE%9E%E4%BE%8B%E7%9A%84%E9%80%89%E9%A1%B9%E7%9A%84%E9%A1%BA%E5%BA%8F-%E6%8E%A8%E8%8D%90)
 
@@ -104,6 +118,8 @@ export default {
 在单文件组件和字符串模板中组件名应该总是 PascalCase 的 —— 但是在 DOM 模板中总是 kebab-case 的。[模板区别](https://segmentfault.com/q/1010000008148754)
 
 这里的名字有点绕。在单文件组件里使用引入的其它组件，这样使用：
+
+[DOM 模板](https://cn.vuejs.org/v2/guide/list.html#%E4%B8%80%E4%B8%AA%E7%BB%84%E4%BB%B6%E7%9A%84-v-for)
 
 ```html
 <template>

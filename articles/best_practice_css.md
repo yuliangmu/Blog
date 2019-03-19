@@ -87,3 +87,20 @@ selector::pseudo-element {
   property: value;
 }
 ```
+
+## 自定义的全局样式使用 **`m-`** 前缀，避免样式污染
+
+```css
+/* 图片等比例缩放居中： 需要应用的文件中给 .m-box-img 设置 width 和 height */
+.m-box-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  > img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+```

@@ -55,6 +55,10 @@ I get 10 times more traffic from [Google][1] than from
 [2]: http://search.yahoo.com/ 'Yahoo Search'
 [3]: http://search.msn.com/ 'MSN Search'
 
+## 带链接的图片（[图床](https://sm.ms/)）
+
+[![download.png](https://i.loli.net/2019/03/19/5c90ba6880dc2.png)](https://i.loli.net/2019/03/19/5c90ba6880dc2.png)
+
 ## 待办事项
 
 **语法：**

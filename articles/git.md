@@ -50,9 +50,21 @@
 
 ## 常见问题
 
-Q: `git mv <file>` 和 `mv <file>` 有什么区别？
+### Q: `git mv <file>` 和 `mv <file>` 有什么区别？
 
-A：都是删除文件，前者会将删除动作添加到暂存区，后者需要手动添加
+A: 都是删除文件，前者会将删除动作添加到暂存区，后者需要手动添加
+
+### Q: git 本地仓库关联多个 remote ？
+
+A: 参考：[知乎][1]
+
+### Q: `git merge --no-ff` 和 `git merge --squash` 是什么意思？
+
+![merge-difference.png](https://i.loli.net/2019/03/19/5c90e04054b06.png)
+
+A: 参考：[Segmentfault](https://segmentfault.com/q/1010000002477106/a-1020000002519351)
+
+[1]: https://www.zhihu.com/question/46543115/answer/101761754
 
 ## 命令行
 

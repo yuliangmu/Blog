@@ -3,6 +3,7 @@
 ## 目录
 
 - [锚点链接](##锚点链接)
+- [提取链接](##提取链接)
 - [待办事项](##待办事项)
 - [表格](##表格)
 - [使用 emoji](##使用-emoji)
@@ -30,15 +31,39 @@
 >
 > ③.多级序号需要去除 **`.`**
 
+## 提取链接
+
+当 `.md` 文件中链接过多时，易读性会变得很差，这时可以把链接提取出来：
+
+**语法：**
+
+```md
+I get 10 times more traffic from [Google][1] than from
+[Yahoo][2] or [MSN][3].
+
+[1]: http://google.com/ 'Google'
+[2]: http://search.yahoo.com/ 'Yahoo Search'
+[3]: http://search.msn.com/ 'MSN Search'
+```
+
+**效果：**
+
+I get 10 times more traffic from [Google][1] than from
+[Yahoo][2] or [MSN][3].
+
+[1]: http://google.com/ 'Google'
+[2]: http://search.yahoo.com/ 'Yahoo Search'
+[3]: http://search.msn.com/ 'MSN Search'
+
 ## 待办事项
 
 **语法：**
 
 `- [ ] todo`
 
-`-[x] done`
+`- [x] done`
 
-`-[x] ~~line-through~~`
+`- [x] ~~line-through~~`
 
 **效果：**
 

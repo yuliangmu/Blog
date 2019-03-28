@@ -18,6 +18,8 @@
 
 - Toggle 程序坞： **⌘+⌥+D**
 
+- 打开 Finder：**⌘+⌥+Space**
+
 ## Chrome
 
 - 审查元素：**⌘+⇧+C**

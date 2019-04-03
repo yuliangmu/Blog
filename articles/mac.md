@@ -1,27 +1,33 @@
 # Mac 备忘清单
 
-**⌘ => Command** => ⊞
+**`⌘`** => **`⊞`** => **`Command`** 
 
-**⌃ => Control** => Ctrl
+**`⌃`** => **`Ctrl`** => **`Control`**
 
-**⌥ => Option** => Alt
+**`⌥`** => **`Alt`** => **`Option`**
 
-**⇧ => Shift** => Shift
+**`⇧`** => **`Shift`** => **`Shift`**
+
+> PC 和 Mac 都使用全称
 
 ## Mac OS
 
-- 屏幕截取： **⌘+⇧+5**
+- **`Command + C`** + **`Command + Shift + V`** 剪切
 
-- 剪切：先 **⌘+C** 然后 **⌘+⇧+V**
+- **`Command + ,`** 打开应用设置
 
-- 强制退出： **⌘+⌥+Esc**
+- **`Command + Shift + 5`** 屏幕截取
 
-- Toggle 程序坞： **⌘+⌥+D**
+- **`Command + Shift + D`** Toggle 程序坞
 
-- 打开 Finder：**⌘+⌥+Space**
+- **`Command + Shift + Esc`** 强制退出
 
-## Chrome
+- **`Command + Shift + Space`** 打开 Finder
 
-- 审查元素：**⌘+⇧+C**
+- **`Control + ↑`** Toggle 所有打开的窗口（同`F11`）
 
-- 控制台：**⌘+⌥+I**
+## 资源
+
+- [Mac Basic](https://help.apple.com/macOS/mojave/mac-basics/#intro)
+
+- [Mac 键盘快捷键](https://support.apple.com/zh-cn/HT201236)

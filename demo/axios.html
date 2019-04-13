@@ -1,50 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>axios</title>
-    <script src="../assets/lib/vue@2.5.21.js"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  </head>
-  <body>
-    <div id="app">
-      <h1>Bitcoin Price Index</h1>
-      <section v-if="errored">
-        <p>We're sorry, we're not able to retrieve this information at the moment, please try back later</p>
-      </section>
-      <section v-else>
-        <div v-if="loading">loading...</div>
-        <div v-for="currency in info">
-          {{ currency.description }} <span>:<i v-html="currency.symbol"></i>{{ currency.rate_float | toFixed }}</span>
-        </div>
-      </section>
-    </div>
-  </body>
-  <script>
-    new Vue({
-      el: '#app',
-      data() {
-        return {
-          info: '',
-          loading: true,
-          errored: false
-        }
-      },
-      filters: {
-        toFixed(value) {
-          return value.toFixed(2)
-        }
-      },
-      mounted() {
-        axios
-          .get('https://api.coindesk.com/v1/bpi/currentprice.json')
-          .then(response => (this.info = response.data.bpi))
-          .catch(error => {
-            console.log(error)
-            this.errored = true
-          })
-          .finally(() => (this.loading = false))
+
+<head>
+  <meta charset="UTF-8" />
+  <title>axios</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <h1>Bitcoin Price Index</h1>
+    <section v-if="errored">
+      <p>We're sorry, we're not able to retrieve this information at the moment, please try back later</p>
+    </section>
+    <section v-else>
+      <div v-if="loading">loading...</div>
+      <div v-for="currency in info">
+        {{ currency.description }} <span>:<i v-html="currency.symbol"></i>{{ currency.rate_float | toFixed }}</span>
+      </div>
+    </section>
+  </div>
+</body>
+<script>
+  new Vue({
+    el: '#app',
+    data() {
+      return {
+        info: '',
+        loading: true,
+        errored: false
       }
-    })
-  </script>
+    },
+    filters: {
+      toFixed(value) {
+        return value.toFixed(2)
+      }
+    },
+    mounted() {
+      axios
+        .get('https://api.coindesk.com/v1/bpi/currentprice.json')
+        .then(response => (this.info = response.data.bpi))
+        .catch(error => {
+          console.log(error)
+          this.errored = true
+        })
+        .finally(() => (this.loading = false))
+    }
+  })
+</script>
+
 </html>

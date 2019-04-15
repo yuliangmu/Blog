@@ -1,6 +1,6 @@
 # Mac 备忘清单
 
-**`⌘`** => **`⊞`** => **`Command`** 
+**`⌘`** => **`⊞`** => **`Command`**
 
 **`⌃`** => **`Ctrl`** => **`Control`**
 
@@ -12,17 +12,15 @@
 
 ## Mac OS
 
-- **`Command + C`** + **`Command + Shift + V`** 剪切
-
 - **`Command + ,`** 打开应用设置
 
 - **`Command + Shift + 5`** 屏幕截取
 
-- **`Command + Shift + D`** Toggle 程序坞
+- **`Command + Option + V`** 剪切 -（或者粘贴时，按住 Option 点击右键不放，选择"将项目移动到这里"）
 
-- **`Command + Shift + Esc`** 强制退出
+- **`Command + Option + D`** Toggle 程序坞
 
-- **`Command + Shift + Space`** 打开 Finder
+- **`Command + Option + Esc`** 强制退出
 
 - **`Control + ↑`** Toggle 所有打开的窗口（同`F11`）
 

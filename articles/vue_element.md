@@ -11,3 +11,7 @@
 ## Button 按钮
 
 Button 按钮可以和 Icon 图标一起使用
+
+## Form 表单
+
+[message 国际化](https://github.com/PanJiaChen/vue-element-admin/issues/676)

@@ -15,9 +15,7 @@
     "strings": true
   },
   "editor.tabSize": 2,
-  "editor.wordWrap": "on",
   "files.autoSave": "onFocusChange",
-
   // 插件：prettier
   "prettier.eslintIntegration": true,
   "prettier.semi": false,

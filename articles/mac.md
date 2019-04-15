@@ -14,6 +14,8 @@
 
 - **`Command + ,`** 打开应用设置
 
+- **`Command + Backspace`** 移到废纸篓
+
 - **`Command + Shift + 5`** 屏幕截取
 
 - **`Command + Option + V`** 剪切 -（或者粘贴时，按住 Option 点击右键不放，选择"将项目移动到这里"）

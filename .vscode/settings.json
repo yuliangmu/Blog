@@ -9,11 +9,12 @@
     "strings": true
   },
   "editor.tabSize": 2,
-  "editor.wordWrap": "on",
   "files.autoSave": "onFocusChange",
   // 插件：prettier
   "prettier.eslintIntegration": true,
   "prettier.semi": false,
   "prettier.singleQuote": true,
-  "vetur.format.defaultFormatter.js": "vscode-typescript"
+  // 插件：vetur https://www.cnblogs.com/Alan2016/p/9528893.html
+  "vetur.format.defaultFormatter.js": "vscode-typescript",
+  "eslint.autoFixOnSave": true
 }

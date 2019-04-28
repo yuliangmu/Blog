@@ -1,5 +1,11 @@
 # Vuex
 
+## 项目结构
+
+不要按照deal那样分模块，跟踪数据一致 **切换文件** 查看太麻烦。
+
+分模块使用更好。参考[vuex 官方文档](https://vuex.vuejs.org/zh/guide/structure.html) 或 [vue-element-admin](https://github.com/PanJiaChen/vue-element-admin/tree/master/src/store)
+
 > Vuex 是一个专为 Vue.js 应用程序开发的状态管理模式。它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式发生变化。
 
 基本概念可以查看 [Vuex 文档](https://vuex.vuejs.org/zh/)，字不重要，看图 ↓

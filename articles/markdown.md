@@ -38,9 +38,11 @@
 **语法：**
 
 ```md
+<!-- 左边方括号是显示的文字，右边是引用的链接 -->
 I get 10 times more traffic from [Google][1] than from
 [Yahoo][2] or [MSN][3].
 
+<!-- 尾部的字符串是鼠标 hover 链接时的提示 -->
 [1]: http://google.com/ 'Google'
 [2]: http://search.yahoo.com/ 'Yahoo Search'
 [3]: http://search.msn.com/ 'MSN Search'

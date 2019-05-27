@@ -56,8 +56,10 @@ html {
   display: inline-block;
   overflow: hidden;
   box-sizing: border-box;
+  /* 先定框框大小 */
   width: 100px;
   height: 100px;
+  /* 再由内向外 */
   padding: 10px;
   border: 10px solid #333;
   margin: 10px;
@@ -95,24 +97,27 @@ selector::pseudo-element {
 
 `box-` 用到**具体元素**上， `wrap-` 用于当前元素的**父元素**上
 
-### `df-`
-
-常用 `flex` 布局样式类名：
+### `diplay` 简写 `d-`
 
 ```css
-.df-rn {
+/* GitHub 使用的类似的 ：） */
+.d-f {
+  /* 等价于 .d-frn，建议使用完整的 .d-frn(默认值) */
+  display: flex;
+}
+.d-frn {
   display: flex;
   flex-flow: row nowrap;
 }
-.df-rw {
+.d-frw {
   display: flex;
   flex-flow: row wrap;
 }
-.df-cn {
+.d-fcn {
   display: flex;
   flex-flow: column nowrap;
 }
-.df-cw {
+.d-fcw {
   display: flex;
   flex-flow: column wrap;
 }

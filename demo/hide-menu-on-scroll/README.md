@@ -1,0 +1,3 @@
+- [w3schools](https://www.w3schools.com/howto/howto_js_navbar_hide_scroll.asp)
+- [StackOverflow](https://stackoverflow.com/a/42761693/9698143)
+- [headroom.js](https://github.com/WickyNilliams/headroom.js)

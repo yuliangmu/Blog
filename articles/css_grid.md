@@ -631,7 +631,7 @@ It also accepts a more complex but quite handy syntax for setting everything at 
 
 ### place-self
 
-## Reference
+## References
 
 [张鑫旭](https://www.zhangxinxu.com/wordpress/2018/11/display-grid-css-css3/)
 

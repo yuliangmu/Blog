@@ -2,7 +2,7 @@
 
 兼容：IE9↑
 
-## 目录
+目录：
 
 - [使用 IE 盒模型](#使用-ie-盒模型)
 - [清除浮动](#清除浮动)
@@ -64,7 +64,7 @@ html {
 
   /* Color */
   background: #000;
-  color: #fff
+  color: #fff;
 
   /* Text */
   font-family: sans-serif;
@@ -91,25 +91,45 @@ selector::pseudo-element {
 
 ## 选择器命名
 
-### `box-`
+### `box-` & `wrap-`
 
-具体到**具体元素**，区别于 `wrap-`
+`box-` 用到**具体元素**上， `wrap-` 用于当前元素的**父元素**上
 
-### `wrap-`
+### `df-`
 
-具体元素的**父元素**，通常是 `<div>`
+常用 `flex` 布局样式类名：
+
+```css
+.df-rn {
+  display: flex;
+  flex-flow: row nowrap;
+}
+.df-rw {
+  display: flex;
+  flex-flow: row wrap;
+}
+.df-cn {
+  display: flex;
+  flex-flow: column nowrap;
+}
+.df-cw {
+  display: flex;
+  flex-flow: column wrap;
+}
+```
 
 ### `m-`
 
 公用样式，添加自定义前缀减小污染，例如：
 
-```css
+```scss
 /* 图片等比例缩放并居中 */
-.m-box-img {
-  /* width: ; height: ; 需要给带 m-box-img 类的元素设置宽高 */
+.m-wrap-img {
+  /* width: ; height: ; 需要给带 m-wrap-img 类的元素设置宽高 */
   display: flex;
   justify-content: center;
   align-items: center;
+  // 注意嵌套
   > img {
     width: auto;
     height: auto;

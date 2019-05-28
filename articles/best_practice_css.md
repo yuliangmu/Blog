@@ -11,12 +11,13 @@
 
 ## 使用 IE 盒模型
 
-> [CSS-TRICKS](https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/)
+> [Inheriting box-sizing Probably Slightly Better Best-Practice][2]
 
 ```css
 html {
   box-sizing: border-box;
 }
+
 *,
 *:before,
 *:after {
@@ -26,11 +27,11 @@ html {
 
 ## 清除浮动
 
-> [StackOverflow](https://stackoverflow.com/questions/211383/what-methods-of-clearfix-can-i-use/1633170#1633170)
+> [What methods of ‘clearfix’ can I use?][3]
 
 ```css
 .container::after {
-  content: ''; /* 这改用双引号 */
+  content: ''; /* 这改用双引号(Fuck Formatting tool) */
   display: block;
   clear: both;
 }
@@ -143,3 +144,29 @@ selector::pseudo-element {
   }
 }
 ```
+
+## Misc
+
+[不要使用标签选择器限制`id`或`class`选择器][1]
+
+解释：在性能和维护性上，都有一定的影响
+
+```css
+/* good */
+#error,
+.danger-message {
+  font-color: #c00;
+}
+
+/* bad */
+dialog#error,
+p.danger-message {
+  font-color: #c00;
+}
+```
+
+## References
+
+[1]: https://github.com/fex-team/styleguide/blob/master/css.md#%E5%BC%BA%E5%88%B6-%E5%A6%82%E6%97%A0%E5%BF%85%E8%A6%81%E4%B8%8D%E5%BE%97%E4%B8%BA-idclass-%E9%80%89%E6%8B%A9%E5%99%A8%E6%B7%BB%E5%8A%A0%E7%B1%BB%E5%9E%8B%E9%80%89%E6%8B%A9%E5%99%A8%E8%BF%9B%E8%A1%8C%E9%99%90%E5%AE%9A 'FEX'
+[2]: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ 'CSS-Tricks'
+[3]: https://stackoverflow.com/questions/211383/what-methods-of-clearfix-can-i-use/1633170#1633170 'StackOverflow'

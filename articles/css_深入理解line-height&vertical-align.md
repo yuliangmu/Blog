@@ -5,6 +5,7 @@
 1. `line-height` 是？
 1. `line-height: normal` (默认值为 `normal`)是？
 1. `line-height` 不同单位的区别？（主要是 `px` 和数值）
+1. `line-height: 1` 时字体为什么会溢出容器？ 
 1. `vertical-align` 属性的值 `top` 和 `text-top` 的区别？
 1. `vertical-align` 为什么不是绝对剧中？
 

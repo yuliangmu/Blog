@@ -17,5 +17,6 @@
 
 - [Deep dive CSS: font metrics, `line-height` and `vertical-align`](http://iamvdo.me/en/blog/css-font-metrics-line-height-and-vertical-align)
 - [译：深入理解 CSS：字体度量、`line-height` 和 `vertical-align`](https://zhuanlan.zhihu.com/p/25808995)
+- [line-height:normal是怎样计算的?](https://www.zhihu.com/question/21786347/answer/199853652)
 - [尤雨溪](https://www.zhihu.com/question/21558138/answer/18615056)
 - [张鑫旭](https://www.zhangxinxu.com/wordpress/2015/08/css-deep-understand-vertical-align-and-line-height/)

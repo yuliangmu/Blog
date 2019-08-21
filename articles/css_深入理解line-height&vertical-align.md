@@ -1,11 +1,11 @@
-读完文章，你得知道：
+# Deep dive in `line-height` and `vertical-align`
 
 1. `line-box` 是？
 1. `content-area` 是？
 1. `line-height` 是？
 1. `line-height: normal` (默认值为 `normal`)是？
 1. `line-height` 不同单位的区别？（主要是 `px` 和数值）
-1. `line-height: 1` 时字体为什么会溢出容器？ 
+1. `line-height: 1` 时字体为什么会溢出容器？
 1. `vertical-align` 属性的值 `top` 和 `text-top` 的区别？
 1. `vertical-align` 为什么不是绝对剧中？
 
@@ -18,7 +18,7 @@
 
 - [Deep dive CSS: font metrics, `line-height` and `vertical-align`](http://iamvdo.me/en/blog/css-font-metrics-line-height-and-vertical-align) :+1:
 - [译：深入理解 CSS：字体度量、`line-height` 和 `vertical-align`](https://zhuanlan.zhihu.com/p/25808995)
-- [line-height:normal是怎样计算的?](https://www.zhihu.com/question/21786347/answer/199853652)
+- [line-height:normal 是怎样计算的?](https://www.zhihu.com/question/21786347/answer/199853652)
 - [尤雨溪](https://www.zhihu.com/question/21558138/answer/18615056)
 - [张鑫旭](https://www.zhangxinxu.com/wordpress/2015/08/css-deep-understand-vertical-align-and-line-height/)
-- [文章中的字体下载（Mac已下载）地址](https://github.com/qrpike/Web-Font-Load)
+- [字体下载](https://github.com/qrpike/Web-Font-Load)

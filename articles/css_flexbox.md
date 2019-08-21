@@ -1,4 +1,4 @@
-# Flex 布局
+# Flexbox
 
 用于快速查询
 
@@ -10,9 +10,11 @@
   flex-direction: row | row-reverse | column | column-reverse;
   flex-wrap: wrap | nowrap | wrap-reverse;
   flex-flow: row nowrap; /* 上两个属性简写，推荐使用 */
-  justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly;
+  justify-content: flex-start | flex-end | center | space-between | space-around
+    | space-evenly;
   align-items: flex-start | flex-end | center | baseline | stretch;
-  align-content: flex-start | flex-end | center | space-between | space-around | stretch;
+  align-content: flex-start | flex-end | center | space-between | space-around |
+    stretch;
 }
 ```
 
@@ -53,7 +55,7 @@
 
 [简写](https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties) 属性。默认值：`flex: initial;` => `flex: 0 1 auto;`，建议使用 **`flex: auto;` => `flex: 1 1 auto;`**，**`flex: none;` => `flex: 0 0 auto;`**，**`flex: 1;` => `flex: 1 1 0;`**。[MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/flex#Syntax)
 
-## 参考
+## References
 
 - CSS-TRICKS: [A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 

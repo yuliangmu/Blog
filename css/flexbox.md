@@ -10,11 +10,9 @@
   flex-direction: row | row-reverse | column | column-reverse;
   flex-wrap: wrap | nowrap | wrap-reverse;
   flex-flow: row nowrap; /* 上两个属性简写，推荐使用 */
-  justify-content: flex-start | flex-end | center | space-between | space-around
-    | space-evenly;
+  justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly;
   align-items: flex-start | flex-end | center | baseline | stretch;
-  align-content: flex-start | flex-end | center | space-between | space-around |
-    stretch;
+  align-content: flex-start | flex-end | center | space-between | space-around | stretch;
 }
 ```
 
@@ -37,7 +35,7 @@
   flex-grow: <number>; /* default 0 */
   flex-shrink: <number>; /* default 1 */
   flex-basis: <length> | auto; /* default auto */
-  flex: none | [ < 'flex-grow' > < 'flex-shrink' >? || < 'flex-basis' > ];
+  flex: none | [ < "flex-grow" > < "flex-shrink" >? || < "flex-basis" > ];
 }
 ```
 

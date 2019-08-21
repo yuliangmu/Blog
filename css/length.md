@@ -1,4 +1,4 @@
-# The Lengths of CSS [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/length)
+# The `<length>` of CSS
 
 ## References
 

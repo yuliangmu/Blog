@@ -22,3 +22,5 @@
 - [尤雨溪](https://www.zhihu.com/question/21558138/answer/18615056)
 - [张鑫旭](https://www.zhangxinxu.com/wordpress/2015/08/css-deep-understand-vertical-align-and-line-height/)
 - [字体下载](https://github.com/qrpike/Web-Font-Load)
+- [图片底部留白](https://www.zhihu.com/question/21558138/answer/18615056)
+- [行内块元素之间的间隙](https://css-tricks.com/fighting-the-space-between-inline-block-elements/)

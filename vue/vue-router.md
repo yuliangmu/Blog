@@ -92,16 +92,177 @@ const router = new VueRouter({
 
 ## 编程式的导航
 
+### `router.push(location, onComplete?, onAbort?)`
+
+> 想要导航到不同的 URL，则使用 `router.push` 方法。这个方法会向 history 栈添加一个**新的记录**，所以，当用户点击浏览器后退按钮时，则回到之前的 URL
+
+点击 `<router-link>` 时，这个方法会在内部调用，所以点击 `<router-link :to="...">` 等同于调用 `router.push(...)`
+
 | 声明式                     | 编程式             |
 | -------------------------- | ------------------ |
 | `<router-link :to="{...}"` | `router.push(...)` |
 
+### `router.replace(location, onComplete?, onAbort?)`
+
+> 跟 `router.push` 很像，唯一的不同就是，它**不会**向 history 添加新记录，而是跟它的方法名一样 —— 替换掉当前的 history 记录
+
+### `router.go(n)`
+
+> 这个方法的参数是一个整数，意思是在 history 记录中向前或者后退多少步，类似 `window.history.go(n)`
+
 ## 命名路由
 
+建议首选**命名**路由，看个例子
+
+```js
+const router = new VueRouter({
+  routes: [
+    {
+      path: '/user/:userId',
+      name: 'user', // 命名路由
+      component: User,
+      children: [
+        path: 'profile',
+        name: 'profile',
+        component: Profile,
+      ]
+    }
+  ]
+})
+```
+
+如果当前是用户 ID 为 `123` 即 `'/user/123'`，要查看他的资料，使用命名路由
+
+```js
+this.$router.push({ name: 'profile' })
+```
+
+如果使用路径，则需要这样写
+
+```js
+this.$router.push({ path: `/user/${this.$route.params.userId}/profile }` })
+```
+
+显然使用命名路由更加简洁且不容易出错
+
 ## 命名视图
+
+项目 deal 的顶部导航栏、页脚和回到顶部组件都可以考虑更改为命名视图
+
+deal 中的做法是使用了**嵌套**展示，这样会导致所有的页面都有页头页脚和回到顶部，如果不需要怎么办？（可以判断路由隐藏，但是很 low 好不好）
+
+```html
+<div class="index">
+  <!-- 页头 -->
+  <deal-header />
+  <!-- 主体内容 -->
+  <div class="main">
+    <router-view />
+  </div>
+  <!-- 页脚 -->
+  <deal-footer />
+  <!-- 回到顶部 -->
+  <back-to-top />
+</div>
+```
+
+mkt 中的做法是需要的地方都 `import` 一遍，灵活性相比 deal 更好，但还是不够优雅，会到处写满 `import`
+
+```html
+<template>
+  <div id="app">
+    <top-nav />
+    <router-view />
+  </div>
+</template>
+<script>
+  import TopNav from '...'
+  export default {
+    components: {
+      TopNav
+    }
+  }
+</script>
+```
+
+如果采用命名视图，只需在路由里面配置就好了
+
+```html
+<template>
+  <div>
+    <router-view name="header"></router-view>
+    <router-view />
+  </div>
+</template>
+
+<script>
+  const router = new VueRouter({
+    routes: [
+      {
+        path: '/home',
+        name: 'Home',
+        components: {
+          default: Home,
+          header: Header // Header 需要 import
+        }
+      }
+    ]
+  })
+</script>
+```
+
+这里有个 [demo](https://medium.com/vue-by-example/vue-router-named-routes-and-reusable-components-1772eb8ff8ac)
 
 ## 重定向和别名
 
 ## 路由组件传参
 
+在组件中使用 `$route` 会使之与其对应路由形成高度**耦合**，从而使组件只能在某些特定的 URL 上使用，限制了其灵活性
+
+```js
+const User = {
+  template: '<div>User {{ $route.params.id }}</div>'
+}
+const router = new VueRouter({
+  routes: [{ path: '/user/:id', component: User }]
+})
+```
+
+可以通过 `props` 解耦，这样便可以在任何地方使用该组件，使得该组件更易于重用和测试
+
+```js
+const User = {
+  props: ['id'],
+  template: '<div>User {{ id }}</div>'
+}
+const router = new VueRouter({
+  routes: [
+    { path: '/user/:id', component: User, props: true },
+
+    // 对于包含命名视图的路由，必须分别为每个命名视图添加 `props` 选项
+    {
+      path: '/user/:id',
+      components: { default: User, sidebar: Sidebar },
+      props: { default: true, sidebar: false }
+    }
+  ]
+})
+```
+
+！！特别注意
+
+通过 `this.$router.push({ name: '...', params: { id: 333 } })` 导航到一个路由后，访问 `$route.params` 是 `{ id: 333 }`, 但是当你在新页面刷新时会变成 `{ id: "333" }`
+
 ## HTML5 History 模式
+
+## 导航守卫
+
+## 路由元信息
+
+## 过度动效
+
+## 数据获取
+
+## 滚动行为
+
+## 路由懒加载

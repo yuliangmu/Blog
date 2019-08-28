@@ -25,7 +25,33 @@
 }
 ```
 
+## 代码片段（snippets）
+
+1. `Command + P`，输入 `snippets`，选择 `Preference: Configure User Snippets`
+
+1. 如果已经创建过，选择 `Existing Snippets` 配置即可，没有则新建
+
+## CSS 缩写
+
+| 简写    | 表示                  |
+| ------- | --------------------- |
+| `p10`   | `padding: 10px;`      |
+| `pl10`  | `padding-left: 10px;` |
+| `m10`   | `margin: 10px;`       |
+| `ml10`  | `margin-left: 10px;`  |
+| `t10`   | `top: 10px;`          |
+| `f10`   | `font: 10px;`         |
+| `fw500` | `font-weight: 500;`   |
+| `h10px` | `height: 10px;`       |
+| `w10`   | `width: 10px;`        |
+
 ## 常用快捷键
+
+### 打开 Terminal
+
+**`Command + J`**（首选）
+
+**`Control +` `**（在 markdown 等有些文件中，有时会无效）
 
 ### 光标快速定位
 
@@ -37,7 +63,7 @@
 
 **`Option + Control + ←/→`** 按单词大小写分解移动光标
 
-~~**`Control + ↑/↓`** 滚动页面 (PC，和 Mac 冲突)~~
+~~**`Control + ↑/↓`** 滚动页面 (Mac 不行)~~
 
 ### 页签切换
 
@@ -54,6 +80,10 @@
 **`Command + Shift + F`** 搜索
 
 **`Option + Shift + F`** 先选择指定目录，再搜索
+
+### 删除上一个单词
+
+**`Option + Backspace`**
 
 ## 资源
 

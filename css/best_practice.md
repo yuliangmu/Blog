@@ -2,12 +2,11 @@
 
 兼容：IE9↑
 
-目录：
-
 - [使用 IE 盒模型](#使用-ie-盒模型)
 - [清除浮动](#清除浮动)
 - [属性书写顺序](#属性书写顺序)
-- [选择器命名](#选择器命名)
+- [伪元素选择器](#伪元素选择器)
+- [Misc](#Misc)
 
 ## 使用 IE 盒模型
 
@@ -109,6 +108,40 @@ p.danger-message {
   color: #c00;
 }
 ```
+
+### flex 简写
+
+Flex 容器
+
+| 简写    | 表示                              |
+| ------- | --------------------------------- |
+| `d-f`   | `display: flex;`                  |
+| `ff-rn` | `flex-flow: row nowrap;`          |
+| `ff-rw` | `flex-flow: row wrap;`            |
+| `ff-cn` | `flex-flow: column nowrap;`       |
+| `ff-cw` | `flex-flow: column wrap;`         |
+| `jc-fs` | `justify-content: flex-start;`    |
+| `jc-fe` | `justify-content: flex-end;`      |
+| `jc-c`  | `justify-content: center;`        |
+| `jc-sb` | `justify-content: space-between;` |
+| `jc-sa` | `justify-content: space-around;`  |
+| `jc-se` | `justify-content: space-evenly;`  |
+| `ai-fs` | `align-items: flex-start;`        |
+| `ai-fe` | `align-items: flex-end;`          |
+| `ai-c`  | `align-items: center;`            |
+| `ai-b`  | `align-items: baseline;`          |
+| `ai-s`  | `align-items: stretch;`           |
+| `ac-fs` | `align-content: flex-start;`      |
+| `ac-fe` | `align-content: flex-end;`        |
+| `ac-c`  | `align-content: center;`          |
+| `ac-sb` | `align-content: space-between;`   |
+| `ac-sa` | `align-content: space-around;`    |
+| `ac-s`  | `align-content: stretch;`         |
+
+Flex 子项（这个不用把。）
+
+<!-- | 简写    | 表示                              |
+| ------- | --------------------------------- | -->
 
 ## References
 

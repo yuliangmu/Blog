@@ -76,6 +76,10 @@ const router = new VueRouter({
 
 这里直接看[文档](https://router.vuejs.org/zh/guide/essentials/dynamic-matching.html#%E6%8D%95%E8%8E%B7%E6%89%80%E6%9C%89%E8%B7%AF%E7%94%B1%E6%88%96-404-not-found-%E8%B7%AF%E7%94%B1)
 
+### 高级匹配模式
+
+deal 详情页和首页的路由有使用，[参考](https://wh2work.com/2018/08/04/vueluyoudegaojipipeimoshi/)
+
 ### 注意事项
 
 当使用路由参数时，例如从 `/user/foo` 导航到 `/user/bar`，原来的组件实例会**被复用**，导致。因为两个路由都渲染同个组件，比起销毁再创建，复用则显得更加高效。不过，这也意味着组件的生命周期钩子不会再被调用

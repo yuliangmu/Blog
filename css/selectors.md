@@ -1,47 +1,54 @@
 # CSS 选择器
 
-兼容性：IE9↑
+兼容 IE9↑
 
-1. [组合选择器](#组合选择器)
-1. [属性选择器](#属性选择器)
-1. [伪类选择器](#伪类选择器)
-1. [伪元素选择器](#伪元素选择器)
+- [组合选择器](#组合选择器)
+- [伪类选择器](#伪类选择器)
+- [伪元素选择器](#伪元素选择器)
+- [属性选择器](#属性选择器)
 
 ## 组合选择器
 
-### 紧邻兄弟选择器（Adjacent sibling combinator）
+### 紧邻兄弟选择器
 
-Syntax: `A + B`
+The **adjacent sibling combinator** (**`+`**) separates two selectors and matches the second element only if it **immediately follows** the first element, and both are children of the same parent element. -- [mdn](https://developer.mozilla.org/en-US/docs/Web/CSS/Adjacent_sibling_combinator)
 
-**`+`** 匹配所有紧邻的兄弟元素。例如：`h2 + p` 匹配**所有挨着** `h2` 的 `p` 元素
+Syntax: **`A + B`**
 
-### 一般兄弟选择器（General sibling combinator）
+**`+`** 匹配所有紧邻的兄弟（具体点，最大的弟弟）元素，例如 `h2 + p` 匹配 `h2` 最大的那个弟弟 `p`
 
-Syntax: `A ~ B`
+### 一般兄弟选择器
 
-**`~`** 匹配所有的兄弟元素。例如：`h2 + p` 匹配**所有**和 `h2`为兄弟的 `p` 元素
+The **general sibling combinator** (**`~`**) separates two selectors and matches the second element only if it **follows** the first element (though not necessarily immediately), and both are children of the same parent element. -- [mdn](https://developer.mozilla.org/en-US/docs/Web/CSS/General_sibling_combinator)
 
-### 子选择器\*\*（Child combinator）
+Syntax: **`A ~ B`**
 
-Syntax: `A > B`
+**`~`** 匹配所有的兄弟（具体点，弟弟）元素，例如 `h2 + p` 匹配 `h2` 所有的弟弟 `p`
 
-**`>`** 匹配所有第一个元素的直接子元素。例如：`ul > li` 匹配**所有** 以 `ul` 为**父元素**的 `li` 元素。（注意继承属性）
+### 子选择器
 
-### 后代选择器（Descendant combinator）
+The **child combinator** (**`>`**) is placed between two CSS selectors. It matches only those elements matched by the second selector that are the children of elements matched by the first.
 
-Syntax: `A B`
+Syntax: **`A > B`**
 
-## 属性选择器
+**`>`** 匹配所有第一个元素的直接子元素，例如 `ul > li` 匹配以 `ul` 为**父元素**的 `li` 元素
 
-参考 [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors)
+### 后代选择器
+
+<!-- markdownlint-disable MD038 -->
+The **descendant combinator** — typically represented by a single space (**` `**) character — combines two selectors such that elements matched by the second selector are selected if they have an ancestor element matching the first selector. Selectors that utilize a descendant combinator are called descendant selectors. -- [mdn](https://developer.mozilla.org/en-US/docs/Web/CSS/Descendant_combinator)
+
+Syntax: **`A B`**
 
 ## 伪类选择器
 
-常用伪类选择器 [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes#Index_of_standard_pseudo-classes)
+A CSS **pseudo-class** is a keyword added to a selector that specifies a special state of the selected element(s). -- [mdn](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes#Index_of_standard_pseudo-classes)
+
+下面列举一些常用伪类选择器
 
 ### `:not`
 
-否定伪类，匹配与选择器列表不匹配的元素
+The **`:not()`** CSS pseudo-class represents elements that do not match a list of selectors. Since it prevents specific items from being selected, it is known as the negation pseudo-class.
 
 ```css
 /* 选择所有不包含类名为 `fancy` 的 `<p>` 元素 */
@@ -50,9 +57,9 @@ p:not(.fancy) {
 }
 ```
 
-### **`:first-child`**
+### `:first-child`
 
-匹配父元素的**第一个**子元素（首先要是第一个子元素，然后匹配元素名字）
+The **`:first-child`** CSS pseudo-class represents the first element among a group of sibling elements. -- [mdn](https://developer.mozilla.org/en-US/docs/Web/CSS/:first-child)
 
 ```css
 p:first-child {
@@ -72,58 +79,54 @@ p:first-child {
 </div>
 ```
 
-[demo](https://codepen.io/yuliangmu/pen/wNGORy)
-
 ### `:last-child`
 
-同 `first-child` 规则
+The **`:last-child`** CSS pseudo-class represents the last element among a group of sibling elements. -- [mdn](https://developer.mozilla.org/en-US/docs/Web/CSS/:last-child)
 
 ### `:nth-child()`
 
-注意：子元素下标从 **1** 开始，参数格式为 `An+B`，A 和 B 必须为整数。当要选择奇数项和偶数项时，可以直接使用关键字 `odd` 和 `even`，分别表示 `2n+1`和 `2n+0`
+The **`:nth-child()`** CSS pseudo-class matches elements based on their position in a group of siblings. -- [mdn](https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child)
 
-`:nth-child()` 和 `:nth-of-type()` 的区别可以参考这个 [demo](https://codepen.io/yuliangmu/pen/XOdQWW?editors=1100)
-
-### `:first-of-type`
-
-同 `first-child`，多个 type 限制
-
-### `:last-of-type`
-
-同 `last-child` 规则，多个 type 限制
-
-### `:nth-of-type()`
-
-同 `:nth-child()` 规则，多个 type 限制
-
-[demo](https://codepen.io/yuliangmu/pen/XOdvWr)
+**注意**：子元素下标从 **1** 开始，参数格式为 `An+B`，A 和 B 必须为整数。当要选择奇数项和偶数项时，可以直接使用关键字 `odd` 和 `even`，分别表示 `2n+1`和 `2n+0`
 
 ### `:only-child`
 
-匹配属于父元素的唯一子元素（没有兄弟元素），等同于 `:first-child:last-child` 或 `:nth-child(1):nth-last-child(1)`
+The **`:only-child`** CSS pseudo-class represents an element without any siblings. This is the same as `:first-child:last-child` or `:nth-child(1):nth-last-child(1)`, but with a lower specificity.
 
-[demo](https://codepen.io/yuliangmu/pen/WPwVRL)
+### `:first-of-type`
 
-> 这种选择器其实还是有必要用，更加语义化，且如果更改 DOM 结构有影响时，可以及时作出更改
+The **`:first-of-type`** CSS pseudo-class represents the first element of its type among a group of sibling elements. -- [mdn](https://developer.mozilla.org/en-US/docs/Web/CSS/:first-of-type)
+
+### `:last-of-type`
+
+The **`:last-of-type`** CSS pseudo-class represents the last element of its type among a group of sibling elements. -- [mdn](https://developer.mozilla.org/en-US/docs/Web/CSS/:last-of-type)
+
+### `:nth-of-type()`
+
+The **`:nth-of-type()`** CSS pseudo-class matches elements of a given type, based on their position among a group of siblings. -- [mdn](https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-of-type)
 
 ### `:only-of-type`
 
-同 `:only-child`，多个 type 条件
+The **`:only-of-type`** CSS pseudo-class represents an element that has no siblings of the same type. -- [mdn](https://developer.mozilla.org/en-US/docs/Web/CSS/:only-of-type)
 
-[demo](https://codepen.io/yuliangmu/pen/BMKXZO)
+同 `:only-child`，多个 type 条件
 
 ## 伪元素选择器
 
 ### `::selection`
 
-应用于文档中被用户高亮的部分（例如用户点击或拖动鼠标选择的文本），具体案例可以参考 [CSS-TRICKS](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+The **`::selection`** CSS pseudo-element applies styles to the part of a document that has been highlighted by the user (such as clicking and dragging the mouse across text). -- [mdn](https://developer.mozilla.org/en-US/docs/Web/CSS/::selection)
 
-Firefox, IOS Safari 兼容性注意一下：[caniuse](https://caniuse.com/#search=%3A%3Aselection)。[demo](https://codepen.io/yuliangmu/pen/jdrNbb)
+Firefox, IOS Safari 兼容性 [caniuse](https://caniuse.com/#search=%3A%3Aselection)
 
 ### `::first-letter`
 
-应用于块级元素中第一行的第一个字母，并且文字所处行之前没有其它内容（比如图片和内联的表格）。[demo](https://codepen.io/yuliangmu/pen/GzqKjL?editors=1100)
+The **`::first-letter`** CSS pseudo-element applies styles to the first letter of the first line of a block-level element, but only when not preceded by other content (such as images or inline tables). -- [mdn](https://developer.mozilla.org/en-US/docs/Web/CSS/::first-letter)
 
-## 参考资料
+## 属性选择器
 
-[MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors)
+The CSS **attribute selector** matches elements based on the presence or value of a given attribute. -- [mdn](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors)
+
+## 参考
+
+[CSS selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors)

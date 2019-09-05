@@ -18,6 +18,8 @@
 
 - **`Command + Shift + 5`** 屏幕截取
 
+- **`Command + Shift + .`** Toggle 隐藏文件
+
 - **`Command + Option + V`** 剪切 -（或者粘贴时，按住 Option 点击右键不放，选择"将项目移动到这里"）
 
 - **`Command + Option + D`** Toggle 程序坞

@@ -114,11 +114,11 @@ I get 10 times more traffic from [Google][1] than from [Yahoo][2].
 GFM 提供了丰富的 emoji，使用非常方便
 
 ```md
-:libra: :heart: :+1:
+:joy: :libra: :heart: :+1: :clap: :tada: :x: :heavy_exclamation_mark: :bangbang:
 ```
 
 效果
 
-:libra: :heart: :+1:
+:joy: :libra: :heart: :+1: :clap: :tada: :x: :heavy_exclamation_mark: :bangbang:
 
 > 关键词参考 [emoji-cheat-sheet](https://www.webfx.com/tools/emoji-cheat-sheet/)

@@ -48,7 +48,7 @@ A CSS **pseudo-class** is a keyword added to a selector that specifies a special
 
 ### `:not`
 
-The **`:not()`** CSS pseudo-class represents elements that do not match a list of selectors. Since it prevents specific items from being selected, it is known as the negation pseudo-class.
+The **`:not()`** CSS pseudo-class represents elements that do not match a list of selectors. Since it prevents specific items from being selected, it is known as the negation pseudo-class. -- [mdn](https://developer.mozilla.org/en-US/docs/Web/CSS/:not)
 
 ```css
 /* 选择所有不包含类名为 `fancy` 的 `<p>` 元素 */

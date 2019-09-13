@@ -1,5 +1,3 @@
-# 鱼梁木的博客
+# My notes
 
-记录各种知识点，文章暂时都放在 articles 目录下，积累多些再做整理。
-
-这个 README 后期用于做目录
+The palest ink is better than the best memory.

@@ -26,6 +26,16 @@
 
 **`Command + Shift + P`** 控制台命令面板，输入关键字如：layout
 
+## 个性化
+
+### 显示完整的 url
+
+把下面的两条设置为 disabled
+
+chrome://flags/#omnibox-ui-hide-steady-state-url-trivial-subdomains
+
+chrome://flags/#omnibox-ui-hide-steady-state-url-scheme
+
 ## References
 
 [Chrome 键盘快捷键](https://support.google.com/chrome/answer/157179?hl=zh-Hans)

@@ -1,89 +1,86 @@
-# vscode 编辑器
+# Visual Studio Code
 
-## 工作区设置
+## 编辑器设置
 
-```js
-{
-  // 编辑器
-  "editor.formatOnPaste": true,
-  "editor.formatOnSave": true,
-  "editor.formatOnType": true,
-  "editor.mouseWheelZoom": true,
-  "editor.quickSuggestions": {
-    "other": true,
-    "comments": true,
-    "strings": true
-  },
-  "editor.tabSize": 2,
-  "files.autoSave": "onFocusChange",
-  // 插件：prettier
-  "prettier.eslintIntegration": true,
-  "prettier.semi": false,
-  "prettier.singleQuote": true,
-  // 插件：vetur https://www.cnblogs.com/Alan2016/p/9528893.html
-  "vetur.format.defaultFormatter.js": "vscode-typescript"
-}
-```
+<!-- markdownlint-disable -->
+<details>
+  <summary>settings.json</summary>
+  <pre>
+    {
+      "editor.formatOnPaste": true,
+      "editor.formatOnSave": true,
+      "editor.formatOnType": true,
+      "editor.minimap.enabled": false,
+      "editor.mouseWheelZoom": true,
+      "editor.renderWhitespace": "selection",
+      "editor.tabSize": 2,
+      "editor.quickSuggestions": {
+        "other": true,
+        "comments": true,
+        "strings": true
+      },
+      "files.autoSave": "onFocusChange",
+      "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+      "workbench.startupEditor": "none",
+      "window.zoomLevel": 0,
+      "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+      },
+      "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+      }
+      // prettier（vetur单独设置）
+      "prettier.semi": false,
+      "prettier.singleQuote": true,
+      "prettier.trailingComma": "es5"
+      "vetur.format.defaultFormatterOptions": {
+        "prettier": {
+          "semi": false,
+          "singleQuote": true,
+          "trailingComma": "es5"
+        }
+      }
+    }
+  </pre>
+</details>
+<!-- markdownlint-restore -->
+
+## 快捷键整理
+
+view [here](https://code.visualstudio.com/docs/getstarted/keybindings#_keyboard-shortcuts-reference)
+
+**`⌘`** => **`⊞`**
+
+**`⌃`** => **`Ctrl`**
+
+**`⌥`** => **`Alt`**
+
+**`⇧`** => **`Shift`**
+
+> 等我买得起 Mac 那一天，我就...
+
+|          | Mac            | Pc                                  | 备注                              |
+| -------- | -------------- | ----------------------------------- | --------------------------------- |
+| Terminal | ⌘ + J / ⌃ + \` | Ctrl + J/\`                         | Toggle 终端                       |
+| Terminal | ⌃ + ⇧ + \`     | Ctrl + Shift + \`                   | 新建终端                          |
+|          |                |                                     |                                   |
+| Cursor   | ⌘ + ↑/↓        | Ctrl + Home/End                     | 首行/尾行                         |
+| Cursor   | ⌘ + ←/→        | Home/End                            | 行首/行尾                         |
+| Cursor   | ⌥ + ←/→        | Ctrl + ←/→                          | 以单词为单位左右移动光标          |
+|          |                |                                     |                                   |
+| Delete   | ⌥ + Del        | Alt + Del                           | 删除上一个单词                    |
+| Delete   | ⌘ + ⇧ + K      | Ctrl + Shift + K                    | 删除当前行                        |
+|          |                |                                     |                                   |
+| Tabs     | ⌃ + Tab        | Ctrl + Tab                          | 页签切换                          |
+|          |                |                                     |                                   |
+| SideBar  | ⌘ + ⇧ + E      | Ctrl + Shift + E                    | 聚焦到 Explorer                   |
+| SideBar  | ⌘ + ⇧ + F      | Ctrl + Shift + F                    | 搜索                              |
+|          |                |                                     |                                   |
+| Comment  |                | ~~Alt + Shift + A~~(和企微截图冲突) | 多行注释直接手动输入 /\*\* 后回车 |
 
 ## 代码片段（snippets）
 
-1. `Command + P`，输入 `snippets`，选择 `Preference: Configure User Snippets`
-
-1. 如果已经创建过，选择 `Existing Snippets` 配置即可，没有则新建
-
-## CSS 缩写
-
-| 简写    | 表示                  |
-| ------- | --------------------- |
-| `p10`   | `padding: 10px;`      |
-| `pl10`  | `padding-left: 10px;` |
-| `m10`   | `margin: 10px;`       |
-| `ml10`  | `margin-left: 10px;`  |
-| `t10`   | `top: 10px;`          |
-| `f10`   | `font: 10px;`         |
-| `fw500` | `font-weight: 500;`   |
-| `h10px` | `height: 10px;`       |
-| `w10`   | `width: 10px;`        |
-
-## 常用快捷键
-
-### 打开 Terminal
-
-**`Command + J`**（首选）
-
-**`Control +` `**（在 markdown 等有些文件中，有时会无效）
-
-### 光标快速定位
-
-**`Command + ↑/↓`** 文件顶部/尾部
-
-**`Command + ←/→`** 行首/行尾（同 `Home/End`）:+1:
-
-**`Option + ←/→`** 按单词为单位左右移动光标 :+1:
-
-**`Option + Control + ←/→`** 按单词大小写分解移动光标
-
-~~**`Control + ↑/↓`** 滚动页面 (Mac 不行)~~
-
-### 页签切换
-
-**`Control + Tab`** 页签切换 :m:
-
-**`Command + Option + ←/→`** 页签切换
-
-**`Control + Command + →`** 当前文件在分组中查看 :+1:
-
-**`Option + Click`** 按住 `Option` 点击文件，实现分组打开
-
-### 搜索
-
-**`Command + Shift + F`** 搜索
-
-**`Option + Shift + F`** 先选择指定目录，再搜索
-
-### 删除上一个单词
-
-**`Option + Backspace`**
+view [here](https://code.visualstudio.com/docs/editor/userdefinedsnippets)
 
 ## 资源
 

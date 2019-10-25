@@ -46,6 +46,13 @@
 
 参考：[知乎](https://www.zhihu.com/question/46543115/answer/101761754)
 
+### 本地仓库关联远程仓库
+
+```git
+git remote add origin(自己命名，比如gitee) git@gitee.com:yuliangmu/shares.git(远程仓库地址)
+git push -u origin master(第一次提交，后面提交可以直接 git push gitee [localbranch:branch1])
+```
+
 ### `git merge --no-ff` 和 `git merge --squash` 是什么意思
 
 ![merge-difference.png](https://i.loli.net/2019/03/19/5c90e04054b06.png)

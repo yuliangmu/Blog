@@ -53,6 +53,8 @@ git remote add origin(自己命名，比如gitee) git@gitee.com:yuliangmu/shares
 git push -u origin master(第一次提交，后面提交可以直接 git push gitee [localbranch:branch1])
 ```
 
+[参考](https://www.liaoxuefeng.com/wiki/896043488029600/898732864121440)
+
 ### `git merge --no-ff` 和 `git merge --squash` 是什么意思
 
 ![merge-difference.png](https://i.loli.net/2019/03/19/5c90e04054b06.png)

@@ -61,3 +61,5 @@
 [教程-廖雪峰](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
 
 [教程-Pro Git](https://git-scm.com/book/en/v2)
+
+[git 简明指南](http://rogerdudler.github.io/git-guide/index.zh.html)

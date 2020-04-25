@@ -20,6 +20,10 @@
 
 **`Alt + ←/→`**
 
+### B站光标定位搜索栏
+
+**`Alt + Shift + S`**
+
 ### 控制台
 
 看一下这个系列介绍：[Medium](https://medium.com/@tomsu)
